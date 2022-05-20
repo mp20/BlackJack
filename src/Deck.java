@@ -4,6 +4,8 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.RestoreAction;
+
 public class Deck {
     //we want to have an array of cards
     private List<Cards> listOfCards;
@@ -37,14 +39,32 @@ public class Deck {
         Collections.shuffle(listOfCards);
     }
     /**
-     * Draws the first card in the list and removes it from the deck
-     * @return the card that was removed
+     * Draws a card for the player and adds it to players list of cards.
+     * @param player the player 
+     * @return the card that was drawn out of the deck.
      */
-    public Cards draw() {
+    public Cards draw(Player player) {
         Cards card = listOfCards.get(0);
+        player.addToPlayersCards(card);
         listOfCards.remove(card);
         pulledCards.add(card);
         return card;
+    }
+    /**
+     * Draws a card for the ai and adds it to ai list of cards.
+     * @param player the dealer 
+     * @return the card that was drawn out of the deck.
+     */
+    public Cards draw(AI ai) {
+        Cards card = listOfCards.get(0);
+        ai.addToAiCards(card);
+        listOfCards.remove(card);
+        pulledCards.add(card);
+        return card;
+    }
+
+    public void reset() {
+        
     }
 
     @Override
