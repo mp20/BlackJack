@@ -1,18 +1,8 @@
-## Getting Started
+## Black Jack Game
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Black Jack game coded in java (In development). In the future, this project will incldue a GUI through JavaFx which will more accuratley resemble a traditional Black Jack environment.
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Objective
+* To gain better familiarity with more OOP style of program that contain numerous classes with correlating dependencies between these classes.
+* To gain a better understanding of GUI through the JavaFx framework, similar to that of the Itunes API project listed 
+* To gain a better understanding of Multi-Threading with all the action in the GUI, though this will be added later in the project
