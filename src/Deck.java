@@ -20,7 +20,7 @@ public class Deck {
                 listOfCards.add(c);
             }
         }
-       // shuffle();
+        shuffle();
     } //deck()
 
     public List<Cards> getListOfCards() {
@@ -30,9 +30,21 @@ public class Deck {
         return pulledCards;
     }
 
-
+    /**
+     * Shuffles the deck of cards.
+     */
     public void shuffle() {
         Collections.shuffle(listOfCards);
+    }
+    /**
+     * Draws the first card in the list and removes it from the deck
+     * @return the card that was removed
+     */
+    public Cards draw() {
+        Cards card = listOfCards.get(0);
+        listOfCards.remove(card);
+        pulledCards.add(card);
+        return card;
     }
 
     @Override
@@ -41,7 +53,7 @@ public class Deck {
         for(int i = 0; i < listOfCards.size() - 1; i++) {
             deck += listOfCards.get(i) + ", ";
         }
-        return deck + listOfCards.get(51) + "]";
+        return deck + listOfCards.get(listOfCards.size() - 1) + "]";
     }
 
-} //class
+} //class 
