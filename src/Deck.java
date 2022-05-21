@@ -55,9 +55,9 @@ public class Deck {
      * @param player the dealer 
      * @return the card that was drawn out of the deck.
      */
-    public Cards draw(AI ai) {
+    public Cards draw(AI ai, boolean isVisible) {
         Cards card = listOfCards.get(0);
-        ai.addToAiCards(card);
+        ai.addToAiCards(card, isVisible);
         listOfCards.remove(card);
         pulledCards.add(card);
         return card;

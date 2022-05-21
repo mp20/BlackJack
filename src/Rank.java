@@ -1,3 +1,5 @@
+import javax.swing.SwingWorker.StateValue;
+
 public enum Rank {
     TWO(2),
     THREE(3),
@@ -16,8 +18,11 @@ public enum Rank {
     int value1;
    
     Rank(int value) {
-        this.value1 = value;
-      
+        this.value1 = value; 
+    }
+
+    public void setAceValue(int num) {
+        Rank.ACE.value1 = num;
     }
 
     public int getValue1() {

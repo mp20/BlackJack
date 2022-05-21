@@ -14,12 +14,9 @@ public class Player {
         playersCards = new ArrayList<>();
     }
 
-    public List<Cards> getPlayersCards() {
-        return playersCards;
-    }
-
-    public int getValueOfHand() {
-        return valueOfHand;
+    public void reset() {
+        valueOfHand = 0;
+        playersCards.clear();
     }
 
     public void addToPlayersCards(Cards card) {
@@ -28,9 +25,17 @@ public class Player {
         } else {
             valueOfHand += card.getRank().value1;
         }
-        
         playersCards.add(card);
     }
+
+    public List<Cards> getPlayersCards() {
+        return playersCards;
+    }
+
+    public int getValueOfHand() {
+        return valueOfHand;
+    }
+
 
     public int getHandsWon() {
         return handsWon;

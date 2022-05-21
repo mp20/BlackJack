@@ -3,11 +3,21 @@ import java.lang.annotation.Retention;
 public class Cards {
     private Rank rank;
     private Suit suit;    
+    private boolean visible;
 
     public Cards() {
     }
 
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
+
     public Cards(Suit suit, Rank rank) {
+        this.setVisible(true);
         this.setRank(rank);
         this.setSuit(suit);
     }
