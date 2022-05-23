@@ -1,18 +1,11 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.RestoreAction;
-
 public class Deck {
-    //we want to have an array of cards
     private List<Cards> listOfCards;
-    private List<Cards> pulledCards;
+    private List<Cards> pulledCards; 
 
-
-    //constructor
     public Deck() {
         listOfCards = new ArrayList<>(52);
         pulledCards = new ArrayList<>();
@@ -61,10 +54,6 @@ public class Deck {
         listOfCards.remove(card);
         pulledCards.add(card);
         return card;
-    }
-
-    public void reset() {
-        
     }
 
     @Override

@@ -1,5 +1,3 @@
-import javax.swing.SwingWorker.StateValue;
-
 public enum Rank {
     TWO(2),
     THREE(3),
@@ -20,7 +18,11 @@ public enum Rank {
     Rank(int value) {
         this.value1 = value; 
     }
-
+    /**
+     * This method is needed due to ACE having two possible states (i.e. 11/1)
+     * Using this method we can set the correct value of ace in the given situtation
+     * @param num the value we want ace to have, either 1 or 11
+     */
     public void setAceValue(int num) {
         Rank.ACE.value1 = num;
     }

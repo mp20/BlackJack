@@ -1,9 +1,7 @@
-import java.lang.annotation.Retention;
-
 public class Cards {
     private Rank rank;
     private Suit suit;    
-    private boolean visible;
+    private boolean visible; //needed due to the first card of the dealer needing to be invisible to the player
 
     public Cards() {
     }
